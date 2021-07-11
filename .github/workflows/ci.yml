@@ -30,6 +30,7 @@ jobs:
       - name: Test Polls App
         run: |
           source bin/activate
+          python3 -m pip install Django
           cd djangopolls
           python3 manage.py test polls
 
