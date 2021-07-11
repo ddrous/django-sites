@@ -17,7 +17,7 @@ on:
 # A workflow run is made up of one or more jobs that can run sequentially or in parallel
 jobs:
   # This workflow contains a single job called "build"
-  build:
+  test:
     # The type of runner that the job will run on
     runs-on: ubuntu-latest
 
@@ -27,7 +27,7 @@ jobs:
       - uses: actions/checkout@v2
 
       # Runs the Django tests for the polls app
-      - name: Test Polls App
+      - name: Test the Polls app
         run: |
           source bin/activate
           python3 -m pip install Django
